@@ -1,0 +1,13 @@
+<script src="https://cdn.jsdelivr.net/npm/golos-js@0.6.3/dist/golos.min.js"></script>
+<script>
+var accounts = [ 'golos', 'goloscore' ];
+golos.api.getAccounts(accounts, function(err, result) {
+  //console.log(err, result);
+  if (!err) {
+    result.forEach(function(item) {
+      console.log('getAccounts', 'username: [', item.name, '] id: [', item.id, ']');
+    });
+  }
+  else console.error(err);
+});
+</script>
